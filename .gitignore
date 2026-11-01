@@ -1,5 +1,4 @@
 # ---- 编译产物 ----
-build/
 cmake-build-*/
 out/
 bin/
@@ -20,7 +19,6 @@ cmake_install.cmake
 CTestTestfile.cmake
 
 # ---- IDE ----
-.vscode/
 .idea/
 *.sln
 *.vcxproj
