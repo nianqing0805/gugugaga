@@ -11,7 +11,7 @@ private:
     double score;
 
 public:
-    Student(std::string studentName, const std::string& studentId, double studentScore);
+    Student(const std::string& studentName, const std::string& studentId, double studentScore);
     void printInfo() const;//print students'information
     
     void setScore(double newScore);//change score

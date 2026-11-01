@@ -1,5 +1,5 @@
 #include "student.hpp"
-Student::Student(std::string studentName, const std::string& studentId, double studentScore)
+Student::Student(const std::string& studentName, const std::string& studentId, double studentScore)
     : name(studentName), id(studentId),score(studentScore) {}
   
 void Student::printInfo() const {

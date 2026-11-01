@@ -4,9 +4,9 @@ project(STUDENT_DEMO)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(includes)
+target_include_directories(student_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes)
 
 add_library(student_lib STATIC tools/student.cpp)
 add_executable(main src/main.cpp)
 
-target_link_libraries(main student_lib)
+target_link_libraries(main PRIVATE student_lib)
