@@ -1,8 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include <vector>
 
 int main(){
-  cv::Mat img = cv::imread("assets/armor.jpg");
+  cv::Mat img = cv::imread("assets/armor.png");
   if(img.empty()){
     std::cerr << "无法读取图片，请检查路径!" << std::endl;
     return -1;
@@ -13,6 +14,7 @@ int main(){
 
   std::vector<cv::Mat> channels;
   cv::split(hsv, channels);
+
   cv::Mat h_channel = channels[0];
   cv::Mat s_channel = channels[1];
   cv::Mat v_channel = channels[2];
@@ -20,7 +22,6 @@ int main(){
   cv::imshow("H Channel", h_channel);
   cv::imshow("S Channel", s_channel);
   cv::imshow("V Channel", v_channel);
-  cv::imshow("Original", img);
   
   cv::Mat m1, m2, mask;
   int s_min = 100;
